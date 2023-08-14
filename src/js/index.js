@@ -476,7 +476,7 @@ function rectifyUrl(url) {
 }
 
 function openAllTabs() {
-    let folder = currentFolder ? document.getElementById(currentFolder) : document.getElementById('wrap');
+    let folder = document.getElementById('wrap');
 
     if (folder) {
         let dials = [...folder.getElementsByClassName('tile')];
