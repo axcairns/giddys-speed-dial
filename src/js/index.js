@@ -116,6 +116,28 @@ function displayClock() {
 
 displayClock();
 
+function removeBookmark(url) {
+    let currentParent = currentFolder ? currentFolder : speedDialId
+    browser.bookmarks.search({url})
+        .then(bookmarks => {
+            let cleanup = bookmarks.length < 2;
+            for (let bookmark of bookmarks) {
+                if (bookmark.parentId === currentParent) {
+                    // animate removal
+                    targetNode.style.display = "none";
+                    layout(true);
+                    // remove dial
+                    targetNode.remove();
+                    browser.bookmarks.remove(bookmark.id);
+                    // if we have duplicates (ex in other folders), keep the image cache, otherwise purge it
+                    if (cleanup) {
+                        browser.storage.local.remove(url);
+                    }
+                }
+            }
+        })
+}
+
 function showFolder(id, title) {
 
     currentFolder = id;
@@ -1040,6 +1062,10 @@ window.addEventListener("mousedown", e => {
                 case 'refreshAll':
                     modalShowEffect(refreshAllModalContent, refreshAllModal);
                     break;
+                case 'delete':
+                    removeBookmark(targetTileHref);
+                    break;
+                case 'editFolder':
             }
             break;
         default:
