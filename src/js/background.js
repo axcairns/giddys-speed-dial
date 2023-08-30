@@ -1,4 +1,4 @@
-// Simple Speed Dial
+// Giddy's Speed Dial
 // copyright 2019 dev@conceptualspace.net
 // absolutely no warranty is expressed or implied
 

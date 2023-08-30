@@ -53,7 +53,7 @@
   },
   "extensionName": {
     "description": "title of the app, displayed in store",
-    "message": "Simple Speed Dial"
+    "message": "Giddy's Speed Dial"
   },
   "help": {
     "message": "Help"
@@ -89,10 +89,10 @@
     "message": "New Folder..."
   },
   "newInstall1": {
-    "message": "Get started with Simple Speed Dial!"
+    "message": "Get started with Giddy's Speed Dial!"
   },
   "newInstall2": {
-    "message": "⭐ Add sites by clicking the button below, or add bookmarks to the Speed Dial folder"
+    "message": "⭐ Add bookmarks to the Speed Dial folder or sub-folders using using the Bookmark function of your browser"
   },
   "newInstall3": {
     "message": "✨ Dials can be modified by right-clicking on them"

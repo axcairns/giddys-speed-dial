@@ -1,4 +1,4 @@
-// Simple Speed Dial
+// Giddy's Speed Dial
 // absolutely no warranty is expressed or implied
 
 'use strict';
@@ -265,6 +265,10 @@ function refreshBookmarks(parent) {
     bookmarksContainer.innerHTML = "";
 
     browser.bookmarks.getChildren(parent).then(children => {
+
+        if ((!children || children.length == 0) && parent == speedDialId) {
+            noBookmarks.style.display = 'block';
+        }
 
         if (children && children.length) {
 
