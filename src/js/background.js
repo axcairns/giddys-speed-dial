@@ -816,7 +816,7 @@ function changeBookmark(id, info) {
                 })
             }
         } else if (bookmark[0] && bookmark[0].url && ( info.oldParentId === speedDialId || folderIds.indexOf(info.oldParentId) !== -1) ) {
-            // handle SSD bookmarks that are moved outside of SSD but not deleted
+            // handle GSD bookmarks that are moved outside of GSD but not deleted
             //console.log(bookmark, info)
             browser.storage.local.remove(bookmark[0].url).catch((err) => {
                 console.log(err)

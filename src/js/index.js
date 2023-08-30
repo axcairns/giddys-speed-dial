@@ -86,7 +86,7 @@ let breadcrumbTitles = [];
 
 const locale = navigator.language;
 const imageRatio = 1.54;
-const helpUrl = 'https://axcairns.github.io/simple-another-speed-dial/';
+const helpUrl = 'https://axcairns.github.io/giddys-another-speed-dial/';
 
 const debounce = (func, delay = 500, immediate = false) => {
     let inDebounce
@@ -1173,7 +1173,7 @@ function prepareExport() {
         const dateString = `${today.getFullYear()}-${today.getMonth()+1}-${today.getDate()}`;
 
         exportBtn.setAttribute('href', URL.createObjectURL(blob));
-        exportBtn.download = `ssd-export-${dateString}.json`;
+        exportBtn.download = `GSD-export-${dateString}.json`;
         exportBtn.classList.remove('disabled');
 
     });
