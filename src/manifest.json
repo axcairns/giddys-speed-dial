@@ -45,7 +45,7 @@
   "web_accessible_resources": ["icons/icon128.png"],
   "browser_specific_settings": {
     "gecko": {
-      "id": "giddys_speed_dial@cairns.id.au",
+      "id": "giddys_speed_dial2@cairns.id.au",
       "strict_min_version": "59.0"
     }
   }
