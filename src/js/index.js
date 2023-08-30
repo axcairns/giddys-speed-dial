@@ -44,7 +44,6 @@ const switchesContainer = document.getElementById("switchesContainer");
 const wallPaperEnabled = document.getElementById("wallpaper");
 const previewContainer = document.getElementById("previewContainer");
 const backgroundColorContainer = document.getElementById("backgroundColorContainer");
-const largeTilesInput = document.getElementById("largeTiles");
 const rememberFolderInput = document.getElementById("rememberFolder");
 const showTitlesInput = document.getElementById("showTitles");
 const showClockInput = document.getElementById("showClock");
@@ -87,7 +86,7 @@ let breadcrumbTitles = [];
 
 const locale = navigator.language;
 const imageRatio = 1.54;
-const helpUrl = 'https://conceptualspace.github.io/yet-another-speed-dial/';
+const helpUrl = 'https://axcairns.github.io/simple-another-speed-dial/';
 
 const debounce = (func, delay = 500, immediate = false) => {
     let inDebounce
@@ -858,16 +857,6 @@ function applySettings() {
             document.documentElement.style.setProperty('--color', settings.textColor);
         }
 
-        /*
-        if (settings.scaleImages) {
-            document.documentElement.style.setProperty('--image-scaling', 'contain');
-            //document.documentElement.style.setProperty('--image-width', '140px');
-        } else {
-            document.documentElement.style.setProperty('--image-scaling', 'cover');
-            //document.documentElement.style.setProperty('--image-width', '188px');
-        }
-        */
-
         if (settings.maxCols && settings.maxCols !== "100") {
             document.documentElement.style.setProperty('--columns', settings.maxCols * 220 + "px")
             layout();
@@ -916,7 +905,6 @@ function applySettings() {
         textColor_picker.value = settings.textColor;
         textColor_picker_wrapper.style.backgroundColor = settings.textColor;
         showTitlesInput.checked = settings.showTitles;
-        largeTilesInput.checked = settings.largeTiles;
         showClockInput.checked = settings.showClock;
         showSettingsBtnInput.checked = settings.showSettingsBtn;
         maxColsInput.value = settings.maxCols;
@@ -924,14 +912,11 @@ function applySettings() {
 
         if (settings.wallpaperSrc) {
             imgPreview.setAttribute('src', settings.wallpaperSrc);
-            //imgPreview.style.display = 'block';
             imgPreview.onload = function (e) {
                 if (settings.wallpaper) {
                     backgroundColorContainer.style.display = "none";
                     previewContainer.style.opacity = '1';
                     switchesContainer.style.transform = "translateY(0)";
-
-                    //backgroundColorContainer.style.display = 'none';
                 } else {
                     backgroundColorContainer.style.display = "flex";
                     previewContainer.style.opacity = '0';
@@ -955,7 +940,6 @@ function saveSettings() {
     settings.backgroundColor = color_picker.value;
     settings.textColor = textColor_picker.value;
     settings.showTitles = showTitlesInput.checked;
-    settings.largeTiles = largeTilesInput.checked;
     settings.showClock = showClock.checked;
     settings.showSettingsBtn = showSettingsBtn.checked;
     settings.maxCols = maxColsInput.value;
@@ -965,13 +949,6 @@ function saveSettings() {
 
     browser.storage.local.set({ settings })
         .then(() => {
-            /*
-            settingsToast.style.opacity = "1";
-            setTimeout(function () {
-                settingsToast.style.opacity = "0";
-            }, 3500);
-             */
-
             tabMessagePort.postMessage({ updateSettings: true });
         });
 }
@@ -1065,7 +1042,6 @@ window.addEventListener("mousedown", e => {
                 case 'delete':
                     removeBookmark(targetTileHref);
                     break;
-                case 'editFolder':
             }
             break;
         default:
