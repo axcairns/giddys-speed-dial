@@ -9,7 +9,7 @@ Giddy's Speed Dial
 <a href='https://addons.mozilla.org/firefox/addon/giddys-speed-dial/'><img alt='Get it for Firefox' src='https://github.com/axcairns/giddys-speed-dial/raw/master/assets/badges/ff-badge.png'/></a> <!--<a href='https://chrome.google.com/webstore/detail/giddys-speed-dial/imohnlganmafcmidafklgkgfgaagiohn'><img alt='Get it for Chrome' src='https://github.com/axcairns/giddys-speed-dial/raw/master/assets/badges/chrome-badge.png'/></a> <a href='https://microsoftedge.microsoft.com/addons/detail/kachajgmekhiajhbbfpfhbmonmpnpiee'><img src='https://github.com/axcairns/giddys-speed-dial/raw/master/assets/badges/microsoft-badge.png' alt='English badge' style='width: 166px; height: 60px;'/></a>-->
 </h1>
 
-A modern, cross-browser speed dial that respects your privacy, forked from https://github.com/conceptualspace/yet-another-speed-dial
+A modern, cross-browser speed dial that respects your privacy, forked from <a href="https://github.com/conceptualspace/yet-another-speed-dial">Yet Another Speed Dial</a>
 
 As part of efforts to de-google myself I moved from Chrome to Firefox. On Chrome I had already set up bookmark synching to my home server and I found a chrome 'speed dial' extension which (albeit crudely) allowed me to navigate my bookmarks on the new tab page.
 
@@ -20,10 +20,10 @@ Features -
 - Automatically generates thumbnails and screenshots, or add your own.
 - Uses the native bookmarks library so speed dials can be synced by the browser.
 - Supports folders (including sub-folders!)
-- Simple and fast UI
+- Simple, fast and beautiful UI
 - No ads, trackers, or BS :)
 
-Stuff I removed during the rebuild, either because I don't need those features or I broke them inadvertently. If these features float your boat I encourage you to try <a href='https://addons.mozilla.org/firefox/addon/yet-another-speed-dial/'>Yet Another Speed Dial</a>
+Stuff I removed during the rebuild, either because I don't need those features or I broke them inadvertently and didn't like them enough to fix. If these features float your boat I encourage you to try <a href='https://addons.mozilla.org/firefox/addon/yet-another-speed-dial/'>Yet Another Speed Dial</a>
 
  - drag and drop bookmarks (move to folder and reorder in folder)
  - add, edit and delete folders
